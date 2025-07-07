@@ -1,0 +1,110 @@
+.legal-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .legal-page h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        .legal-page h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .legal-page h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .legal-page p, .legal-page li {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .legal-page ul {
+            margin-left: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px);
+        }
+
+         .legal-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .legal-page h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .legal-page h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .legal-page h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .legal-page p,
+        .legal-page li {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .legal-page ul {
+            margin-left: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+        }

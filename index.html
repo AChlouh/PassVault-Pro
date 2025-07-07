@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK5730353L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-DK5730353L');
+    </script>
+
+    <title>PassVault Pro - Sicherer Passwort-Generator & Datenschutz-Tools</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="PassVault Pro - Generiere sichere Passwörter kostenlos. Premium-Features für maximale Sicherheit. 50.000+ zufriedene Nutzer.">
+    <meta name="keywords" content="passwort generator, sichere passwörter, password generator deutsch, datenleck check">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='a' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23667eea'/><stop offset='100%25' style='stop-color:%23764ba2'/></linearGradient><linearGradient id='b' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23ffd700'/><stop offset='100%25' style='stop-color:%23f39c12'/></linearGradient></defs><rect width='32' height='32' rx='6' fill='url(%23a)'/><rect x='6' y='14' width='20' height='16' rx='3' fill='url(%23b)'/><rect x='8' y='16' width='16' height='12' rx='2' fill='white'/><circle cx='16' cy='22' r='3' fill='url(%23b)'/><circle cx='16' cy='22' r='1' fill='black'/><path d='M 13 14 Q 13 10 16 10 Q 19 10 19 14' stroke='%23ffd700' stroke-width='2' fill='none'/></svg>">
+
+    <!-- Link zur externen CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <!-- PassVault Pro Logo -->
+                <svg width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg"
+                    style="margin-bottom: 20px;">
+                    <defs>
+                        <linearGradient id="logoIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Icon -->
+                    <g transform="translate(10, 10)">
+                        <rect x="0" y="10" width="25" height="20" rx="4" fill="url(#logoIconGrad)" stroke="#fff"
+                            stroke-width="1" />
+                        <rect x="2.5" y="12.5" width="20" height="15" rx="2" fill="#fff" />
+                        <circle cx="12.5" cy="20" r="4" fill="url(#logoIconGrad)" />
+                        <circle cx="12.5" cy="20" r="1.5" fill="#333" />
+                        <path d="M 9 10 Q 9 6 12.5 6 Q 16 6 16 10" stroke="#ffd700" stroke-width="2" fill="none" />
+                    </g>
+
+                    <!-- Text -->
+                    <text x="45" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold"
+                        fill="#fff">PassVault</text>
+                    <rect x="135" y="15" width="35" height="20" rx="10" fill="url(#logoIconGrad)" />
+                    <text x="152.5" y="28" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333"
+                        text-anchor="middle">PRO</text>
+                </svg>
+            </div>
+            <h1>🔒 Der modernste Passwort-Generator für maximale Sicherheit</h1>
+            <p>Teste deine Passwort-Sicherheit • Generiere sichere Passwörter • Schütze dich vor Datenlecks</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="generatedCount">1,247,892</span>
+                <span>Generierte Passwörter</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">99.9%</span>
+                <span>Sicherheitsrate</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50K+</span>
+                <span>Zufriedene Nutzer</span>
+            </div>
+        </div>
+
+        <div class="main-card">
+            <div class="generator-section">
+                <h2>🎯 Passwort Generator</h2>
+
+                <div class="form-group">
+                    <label for="length">Passwort-Länge: <span id="lengthValue">12</span> Zeichen</label>
+                    <input type="range" id="length" min="6" max="50" value="12">
+                </div>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <div class="checkbox-content">
+                            <strong>Großbuchstaben</strong>
+                            <small>A-Z</small>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <div class="checkbox-content">
+                            <strong>Kleinbuchstaben</strong>
+                            <small>a-z</small>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <div class="checkbox-content">
+                            <strong>Zahlen</strong>
+                            <small>0-9</small>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="symbols" checked>
+                        <div class="checkbox-content">
+                            <strong>Symbole</strong>
+                            <small>!@#$%^&*</small>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-item premium">
+                        <span class="premium-badge">PRO</span>
+                        <input type="checkbox" id="extendedSymbols" disabled>
+                        <div class="checkbox-content">
+                            <strong>Erweiterte Symbole</strong>
+                            <small>{}[]|~`</small>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-item premium">
+                        <span class="premium-badge">PRO</span>
+                        <input type="checkbox" id="pronounceable" disabled>
+                        <div class="checkbox-content">
+                            <strong>Aussprechbar</strong>
+                            <small>Merkbare Passwörter</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="generatePassword()">🎲 Neues Passwort</button>
+                    <button class="btn btn-secondary" onclick="copyPassword()">📋 Kopieren</button>
+                </div>
+
+                <div class="password-output">
+                    <div class="password-display" id="passwordDisplay">
+                        Klicke auf "Neues Passwort" um zu starten...
+                    </div>
+
+                    <div class="strength-meter">
+                        <label>Passwort-Stärke:</label>
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strengthFill"></div>
+                        </div>
+                        <span id="strengthText">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Analysis Section -->
+        <div class="main-card">
+            <h2>🛡️ Passwort-Sicherheits-Analyse</h2>
+            <p>Teste wie sicher deine aktuellen Passwörter sind!</p>
+
+            <div class="form-group">
+                <label>Dein aktuelles Passwort eingeben:</label>
+                <input type="password" id="testPassword" placeholder="🔐 Gib dein Passwort ein..."
+                    class="full-width-input">
+            </div>
+
+            <button class="btn btn-primary" onclick="analyzePassword()">🔍 Sicherheit prüfen</button>
+
+            <div id="analysisResult" style="display: none; margin-top: 20px; padding: 20px; border-radius: 10px;">
+                <h3 id="hackTime">⚠️ Dein Passwort wäre in XX gehackt!</h3>
+                <div id="securityDetails"></div>
+                <div
+                    style="margin-top: 15px; padding: 15px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
+                    <strong>💡 Empfehlung:</strong> Nutze unseren Generator für sichere Passwörter!
+                </div>
+            </div>
+        </div>
+
+        <!-- Password Manager Section -->
+        <div class="main-card">
+            <h2>📝 Passwort-Manager (Demo)</h2>
+            <p>Speichere und verwalte deine Passwörter sicher</p>
+
+            <div class="form-group">
+                <div class="form-grid">
+                    <input type="text" id="websiteName" placeholder="🌐 Website (z.B. Facebook)">
+                    <input type="text" id="username" placeholder="👤 Benutzername/Email">
+                </div>
+                <input type="password" id="websitePassword" placeholder="🔑 Passwort" class="full-width-input">
+            </div>
+
+            <button class="btn btn-primary" onclick="addPassword()">➕ Passwort hinzufügen</button>
+
+            <div id="passwordList" style="margin-top: 20px;"></div>
+
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center;">
+                <h4>🔒 Sichere Speicherung nur in Premium!</h4>
+                <p>Kostenlose Version: Nur Demo (Daten werden nicht gespeichert)<br>
+                    <strong>Premium:</strong> Verschlüsselte Cloud-Speicherung, Sync zwischen Geräten
+                </p>
+            </div>
+        </div>
+
+        <!-- Breach Check Section -->
+        <div class="main-card">
+            <h2>🚨 Datenleck-Check</h2>
+            <p>Prüfe, ob deine Email-Adresse in bekannten Datenlecks gefunden wurde</p>
+
+            <div class="form-group">
+                <input type="email" id="checkEmail" placeholder="📧 deine@email.de" class="full-width-input">
+            </div>
+
+            <button class="btn btn-primary" onclick="checkDataBreach()">🔍 Datenleck prüfen</button>
+
+            <div id="breachResult" style="display: none; margin-top: 20px;"></div>
+
+            <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 0.9rem;">
+                <strong>🛡️ Kostenlos:</strong> Prüfung von 3 bekannten Datenlecks<br>
+                <strong>💎 Premium:</strong> Überwachung von 15.000+ Datenlecks + automatische Benachrichtigungen
+            </div>
+        </div>
+
+        <div class="premium-section">
+            <h3>🌟 Upgrade zu PassVault Pro</h3>
+            <p>Schalte alle Sicherheits-Features frei und schütze dich richtig!</p>
+
+            <div class="price-tag">Nur 4,99€/Monat <span style="font-size: 1rem; color: #666;">oder 49€/Jahr (2 Monate
+                    gratis!)</span></div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>🔐 Passwort-Manager</h4>
+                    <p>Unbegrenzte Passwörter, verschlüsselte Cloud-Speicherung, Auto-Fill</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🚨 Datenleck-Überwachung</h4>
+                    <p>15.000+ überwachte Datenlecks, sofortige Email-Benachrichtigungen</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📊 Sicherheits-Dashboard</h4>
+                    <p>Detaillierte Analysen, Sicherheits-Score, Verbesserungsvorschläge</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📱 Mobile Apps</h4>
+                    <p>iOS & Android Apps, Fingerprint-Login, Offline-Zugriff</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>👨‍👩‍👧‍👦 Familien-Sharing</h4>
+                    <p>Bis zu 5 Benutzer, geteilte Ordner, Kinder-Sicherheit</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🏢 Business-Features</h4>
+                    <p>Team-Management, Compliance-Reports, SSO-Integration</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+                <button class="btn btn-premium" onclick="showPremiumModal('monthly')">📅 Monatlich - 4,99€</button>
+                <button class="btn btn-premium" onclick="showPremiumModal('yearly')"
+                    style="background: linear-gradient(45deg, #27ae60, #2ecc71);">🎯 Jährlich - 49€ (spare 17%)</button>
+            </div>
+
+            <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                ✅ Jederzeit kündbar &nbsp; | &nbsp; ✅ Sofortiger Zugang &nbsp; | &nbsp; ✅ Deutscher Support
+            </div>
+        </div>
+
+        <!-- FOOTER MIT IMPRESSUM-BUTTONS -->
+        <div class="footer">
+            <div style="margin-bottom: 20px;">
+                <button onclick="window.location.href='impressum.html'"
+                    style="background: none; border: none; color: rgba(255,255,255,0.8); cursor: pointer; margin: 0 15px; text-decoration: underline; font-size: 1rem;">📄
+                    Impressum</button>
+                <button onclick="window.location.href='datenschutz.html'"
+                    style="background: none; border: none; color: rgba(255,255,255,0.8); cursor: pointer; margin: 0 15px; text-decoration: underline; font-size: 1rem;">🔒
+                    Datenschutz</button>
+                <button onclick="window.location.href='agb.html'"
+                    style="background: none; border: none; color: rgba(255,255,255,0.8); cursor: pointer; margin: 0 15px; text-decoration: underline; font-size: 1rem;">📋
+                    AGB</button>
+            </div>
+            <p>© 2025 PassVault Pro - Deine Sicherheit ist unser Auftrag</p>
+            <p>Generierte Passwörter werden niemals gespeichert oder übertragen</p>
+        </div>
+
+        <!-- Legal Modal -->
+        <div id="legalModal"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:10000; overflow-y:auto;">
+            <div
+                style="background:white; margin: 20px auto; max-width: 800px; border-radius: 20px; position: relative;">
+                <div style="padding: 40px; max-height: 80vh; overflow-y: auto;">
+                    <button onclick="hideLegalModal()"
+                        style="position: absolute; top: 15px; right: 20px; background: #f44336; color: white; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 18px;">×</button>
+                    <div id="legalContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Modal (Dynamic Content) -->
+        <div id="premiumModal"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center;">
+            <!-- Content wird dynamisch generiert -->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="payment.js"></script>
+</body>
+
+</html>
